@@ -24,11 +24,10 @@ function AppMainMiddle({list, dataMem, setIsSearch ,searchData }) {
     else {
       setIsSearch(false);
       searchData([]);
-      // setNewData([]);
     }
   }, [input, list, setIsSearch, searchData]);
 
-  
+
   
   function profileSearch(value) {
     setInput(value);

@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import ProfileCards from './ProfileCards'
 import './ProfileCards.css'
 function ProfileCards_grid({ list, dataMem }) {

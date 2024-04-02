@@ -23,7 +23,6 @@ function ProfileCards(props) {
       }
 
 
-
   return (
     <>
     <div className='grid__element' key={props.gridData.id}>
