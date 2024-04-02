@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Search from '../../../assets/images/search__image.png'
 import './AppMainsection.css'
 import Button from '../../../components/AppButton/AppButton'
@@ -8,25 +8,30 @@ import AddNewUser from '../../../pages/AddNewUsers/AddNewUsers'
 function AppMainMiddle({list, dataMem, setIsSearch ,searchData }) {
   const [addnew, setAddnew] = useState(false)
   const [input, setInput] = useState("")
+  // const [newData, setNewData] = useState("")
   let filteredData = []
 
+  useEffect(() => {
+    if (input.length > 0) {
+      filteredData = list.filter((user) =>
+        user.name.toLowerCase().includes(input.toLowerCase())
+      )
+      // setNewData(filteredData);
+      setIsSearch(true);
+      searchData(filteredData);
+    } 
+
+    else {
+      setIsSearch(false);
+      searchData([]);
+      // setNewData([]);
+    }
+  }, [input, list, setIsSearch, searchData]);
+
+  
+  
   function profileSearch(value) {
-    setInput(value)
-    if(value.length > 0)
-    {
-      filteredData = list.filter((users) => {
-        return users.name.toLowerCase().includes(value.toLowerCase())
-      })
-    searchData(filteredData)
-    setIsSearch(true)
-    }
-
-    else{
-      searchData([])
-      setIsSearch(false)
-    }
-    console.log(filteredData)
-
+    setInput(value);
   }
 
   return (
@@ -36,7 +41,7 @@ function AppMainMiddle({list, dataMem, setIsSearch ,searchData }) {
           <img src={Search} className="form__searchimg" />
           <InputField text="text" holder="Search profiles..." name="form__search" value={input} input={(e) => profileSearch(e.target.value)} />
           <Button name="form__button" text="+ Add New" action={() => setAddnew(true)} />
-          {addnew && <AddNewUser list={list} dataMem={dataMem} action={() => setAddnew(false)} />}
+          {addnew && <AddNewUser dataMem={dataMem} action={() => setAddnew(false)} />}
         </div>
       </div>
     </div>

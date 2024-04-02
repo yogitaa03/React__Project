@@ -5,6 +5,7 @@ import './ProfileCards.css'
 
 function ProfileCards(props) {
 
+  let dataMem = props.dataMem
   const [update, setUpdate] = useState(false)
 
 
