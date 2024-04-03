@@ -3,10 +3,11 @@ import InputField from '../../components/AppInput/AppInput'
 import Button from '../../components/AppButton/AppButton'
 import AddNewImage from '../../assets/images/addnew__image.png'
 import WrongImage from '../../assets/images/wrong__image.png'
-import './AddNewUsers.css'
-import data from '../../layout/AppLayout/AppMainsection/AppMainBottom'
+import './AddUser.css'
+// import { data } from '../../layout/AppLayout/AppMainSection/UserData'
+import { data } from '../../layout/AppLayout/AppMainsection/UserData'
 
-function AddNewUser({ action, dataMem, userToUpdate }) {
+function AddUser({ isAddOpen, isUpdateOpen ,handleUserData, userToUpdate }) {
 
 
   const [imageURL, setImageURL] = useState("")
@@ -50,8 +51,8 @@ function AddNewUser({ action, dataMem, userToUpdate }) {
 
       }
 
-      dataMem((prevData) => prevData.map(user => (user.id === updatedUser.id ? updatedUser : user)))
-
+      handleUserData((prevData) => prevData.map(user => (user.id === updatedUser.id ? updatedUser : user)))
+      isUpdateOpen()
     }
 
     else
@@ -66,12 +67,10 @@ function AddNewUser({ action, dataMem, userToUpdate }) {
         id: data.length 
       }
 
-      dataMem((prevArr) => [...prevArr, newMember])
+      handleUserData((prevArr) => [...prevArr, newMember])
+      isAddOpen()
       
     }
-
-    action()
-
   }
 
 
@@ -79,7 +78,7 @@ function AddNewUser({ action, dataMem, userToUpdate }) {
     <form className='form' onSubmit={handleSubmit}>
       <div className="addNewForm__popup" >
         <img src={AddNewImage} className="addNewForm__popup__image" />
-        <img src={WrongImage} className="addNewForm__popup__wrong" onClick={action} />
+        <img src={WrongImage} className="addNewForm__popup__wrong" onClick={isAddOpen} />
         <InputField text='text' holder="Image__URL.." name="addNewForm__popup__entries" inputValue={imageURL} input={(e) => setImageURL(e.target.value)} />
         <InputField text='text' holder="Username" name="addNewForm__popup__entries" inputValue={imageName} input={(e) => setImageName(e.target.value)} />
         <InputField text='text' holder="Country" name="addNewForm__popup__entries" inputValue={imageCountry} input={(e) => setImageCountry(e.target.value)} />
@@ -90,4 +89,4 @@ function AddNewUser({ action, dataMem, userToUpdate }) {
   )
 }
 
-export default AddNewUser
+export default AddUser

@@ -3,7 +3,7 @@ import grid__img2 from '../../../assets/images/grid__img2.png'
 import grid__img3 from '../../../assets/images/grid__img3.png'
 import grid__img4 from '../../../assets/images/grid__img4.png'
 
- let data = [
+ export const data = [
             {
                 Img_URL: grid__img1, name: 'Chris', country: 'Korea', rating: 5, id:0
             },
@@ -18,7 +18,6 @@ import grid__img4 from '../../../assets/images/grid__img4.png'
             }
 ] 
 
-export default data
 
   
 

@@ -1,15 +1,14 @@
 import React from 'react'
-import './AppMainsection.css'
+import './MainSection.css'
 
-function AppMainHeader() {
+function MainHeader() {
     return (
-        <div className="maincontainer" id="maincontainer">
-            <div className="maincontainer__header">
-                <h2 className="maincontainer__header__title">Contentder Experts</h2>
+        <div className="maincontainer">
+            <div className="maincontainerHeader">
+                <h2 className="maincontainerHeaderTitle">Contentder Experts</h2>
             </div>
-          
         </div>
     )
 }
 
-export default AppMainHeader
+export default MainHeader

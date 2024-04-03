@@ -7,30 +7,30 @@
     justify-content: space-between;
   }
 
-  .header__left {
+  .headerLeft {
     width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .header__left__image {
+  .headerLeftImage {
     width: 30px;
     height: 30px;
   }
 
-  .header__left__topic {
+  .headerLeftText {
     font-family: sans-serif;
     font-size: 25px;
   }
 
-  .header__right {
+  .headerRight {
     width: 600px;
     display: flex;
     align-items: center;
   }
 
-  .header__right__navigation {
+  .headerRightNavigation {
     width: 110px;
     border: 3px solid white;
     height: 100%;
@@ -39,11 +39,11 @@
     justify-content: center;
   }
 
-  .header__right__navigation:hover {
+  .headerRightNavigation:hover {
     border-bottom-color: #5f6efa;
   }
 
-  .header__right__button {
+  .headerRightButton {
     border-radius: 25px;
     background-color: #5f6efa;
     padding: 8px;
