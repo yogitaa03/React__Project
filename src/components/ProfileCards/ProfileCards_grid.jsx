@@ -1,15 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import ProfileCards from './ProfileCards'
 import './ProfileCards.css'
 function ProfileCards_grid({ list, dataMem }) {
-
-
-  useEffect(() => {
-    console.log('Total Number of Profiles', list.length);
-    return () => {
-      console.log("A User Profile is removed")
-    }
-  }, [list]);
 
 
   let handleRemove = (id) => {
