@@ -36,7 +36,7 @@ function AppMainMiddle({ list, dataMem, setIsSearch, searchData }) {
       <div className="maincontainer__middle">
         <div className="maincontainer__middle__form">
           <img src={Search} className="form__searchimg" />
-          <InputField text="text" holder="Search profiles..." name="form__search" value={input} input={(e) => profileSearch(e.target.value)} />
+          <InputField text="text" holder="Search profiles..." name="form__search" inputValue={input} input={(e) => profileSearch(e.target.value)} />
           <Button name="form__button" text="+ Add New" action={() => setAddnew(true)} />
           {addnew && <AddNewUser dataMem={dataMem} action={() => setAddnew(false)} />}
         </div>
