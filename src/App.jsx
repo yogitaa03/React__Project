@@ -28,9 +28,6 @@ function App() {
       <AppMainHeader />
       <AppMainMiddle list={list} searchData={searchData} setIsSearch={setIsSearch}  dataMem={dataSet} />
       <ProfileCards_grid list={isSearch ? search : list} dataMem={dataSet} />
-
-      {/* <AppMainMiddle list={list} searchData={searchData} setIsSearch={setIsSearch} dataMem={dataSet} /> */}
-      {/* <ProfileCards_grid list={isSearch ? search : list} search={isSearch && search} dataMem={dataSet} /> */}
     </>
   )
 }
