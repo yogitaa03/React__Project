@@ -5,10 +5,9 @@ import Button from '../../../components/AppButton/AppButton'
 import InputField from '../../../components/AppInput/AppInput'
 import AddNewUser from '../../../pages/AddNewUsers/AddNewUsers'
 
-function AppMainMiddle({list, dataMem, setIsSearch ,searchData }) {
+function AppMainMiddle({ list, dataMem, setIsSearch, searchData }) {
   const [addnew, setAddnew] = useState(false)
   const [input, setInput] = useState("")
-  // const [newData, setNewData] = useState("")
   let filteredData = []
 
   useEffect(() => {
@@ -16,10 +15,9 @@ function AppMainMiddle({list, dataMem, setIsSearch ,searchData }) {
       filteredData = list.filter((user) =>
         user.name.toLowerCase().includes(input.toLowerCase())
       )
-      // setNewData(filteredData);
       setIsSearch(true);
       searchData(filteredData);
-    } 
+    }
 
     else {
       setIsSearch(false);
@@ -28,7 +26,7 @@ function AppMainMiddle({list, dataMem, setIsSearch ,searchData }) {
   }, [input, list, setIsSearch, searchData]);
 
 
-  
+
   function profileSearch(value) {
     setInput(value);
   }

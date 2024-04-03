@@ -8,7 +8,6 @@ function ProfileCards(props) {
   let dataMem = props.dataMem
   const [update, setUpdate] = useState(false)
 
-
     function generateStar(rate) {
         let stars = []
         for (let i = 1; i <= 5; i++) {

@@ -3,6 +3,7 @@ import ProfileCards from './ProfileCards'
 import './ProfileCards.css'
 function ProfileCards_grid({ list, dataMem }) {
 
+
   useEffect(() => {
     console.log('Total Number of Profiles', list.length);
     return () => {
@@ -10,9 +11,9 @@ function ProfileCards_grid({ list, dataMem }) {
     }
   }, [list]);
 
-  let handleRemove =(id) =>
-  {
-    dataMem(list.filter((item) => item.id !== id))
+
+  let handleRemove = (id) => {
+    dataMem((prevData) => prevData.filter(item => (item.id !== id)))
   }
 
 

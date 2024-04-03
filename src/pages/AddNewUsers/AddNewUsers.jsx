@@ -50,7 +50,7 @@ function AddNewUser({ action, dataMem, userToUpdate }) {
 
       }
 
-      dataMem((prevData) => prevData.map(user => (user.id === updatedUser.id ? updatedUser:user)))
+      dataMem((prevData) => prevData.map(user => (user.id === updatedUser.id ? updatedUser : user)))
 
     }
 
