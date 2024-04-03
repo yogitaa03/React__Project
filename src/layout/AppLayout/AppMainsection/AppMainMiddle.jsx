@@ -23,7 +23,7 @@ function AppMainMiddle({ list, dataMem, setIsSearch, searchData }) {
       setIsSearch(false);
       searchData([]);
     }
-  }, [input, list, setIsSearch, searchData]);
+  }, [input, list]);
 
 
 
