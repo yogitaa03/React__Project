@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import InputField from '../../components/AppInput/AppInput'
-import Button from '../../components/AppButton/AppButton'
+import { Button } from '../../components/AppButton/AppButton'
+import { InputField } from '../../components/AppInput/AppInput'
 import AddNewImage from '../../assets/images/addnew__image.png'
 import WrongImage from '../../assets/images/wrong__image.png'
 import './AddUser.css'
@@ -77,7 +77,7 @@ function AddUser({ isAddOpen, isUpdateOpen ,handleUserData, userToUpdate }) {
     <form className='form' onSubmit={handleSubmit}>
       <div className="formPopup" >
         <img src={AddNewImage} className="formPopupImage" />
-        <img src={WrongImage} className="formPopupWrong" onClick={isAddOpen} />
+        <img src={WrongImage} className="formPopupWrong" onClick={isAddOpen || isUpdateOpen} />
         <InputField text='text' holder="Enter user image path" name="formPopupEntries" inputValue={userImage} input={(e) => setUserImage(e.target.value)} />
         <InputField text='text' holder="Enter user name" name="formPopupEntries" inputValue={userName} input={(e) => setUserName(e.target.value)} />
         <InputField text='text' holder="Enter user country" name="formPopupEntries" inputValue={userCountry} input={(e) => setUserCountry(e.target.value)} />

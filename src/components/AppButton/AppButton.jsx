@@ -1,4 +1,4 @@
-let Button=(props)=>
+export const Button=(props)=>
 {
     return(
         <>
@@ -6,4 +6,3 @@ let Button=(props)=>
         </>
     )
 }
-export default Button;

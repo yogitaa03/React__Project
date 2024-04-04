@@ -1,4 +1,4 @@
-let InputField =(props)=>
+export const InputField =(props)=>
 {
     return (
         <>
@@ -6,5 +6,3 @@ let InputField =(props)=>
         </>
     )
 }
-
-export default InputField;

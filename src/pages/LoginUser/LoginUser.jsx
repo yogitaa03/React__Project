@@ -1,10 +1,10 @@
 import LoginImage from '../../assets/images/login__image.jpg'
 import WrongImage from '../../assets/images/wrong__image.png'
 import './LoginUser.css'
-import InputField from '../../components/AppInput/AppInput'
-import Button from '../../components/AppButton/AppButton'
+import { Button } from '../../components/AppButton/AppButton'
+import { InputField } from '../../components/AppInput/AppInput'
 
-let LoginForm=({closeLogin})=>
+export const LoginForm=({closeLogin})=>
 {
 
     return(
@@ -12,7 +12,7 @@ let LoginForm=({closeLogin})=>
         <div className="form">
                 <div className="login" >
                 <img src={LoginImage} className="loginImage"/>
-                <img src={WrongImage} className="loginCross" id="login__cross" onClick={closeLogin}/>
+                <img src={WrongImage} className="loginCross" onClick={closeLogin}/>
                 <div className="loginAuthentication">
                 <InputField text='text' holder="Username" name="loginAuthenticationInput"/>
                 </div>
@@ -25,5 +25,3 @@ let LoginForm=({closeLogin})=>
 
     )
 }
-
-export default LoginForm

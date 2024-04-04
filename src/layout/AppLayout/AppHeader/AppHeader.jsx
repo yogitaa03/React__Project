@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Contender from '../../../assets/images/contentder__image.jpg'
 import './AppHeader.css'
-import LoginForm from '../../../pages/LoginUser/LoginUser'
-import Button from '../../../components/AppButton/AppButton'
+import { LoginForm } from '../../../pages/LoginUser/LoginUser'
+import { Button } from '../../../components/AppButton/AppButton'
 function Header() {
     const [isLogin, setIsLogin] = useState(false)
 

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Search from '../../../assets/images/search__image.png'
 import './MainSection.css'
-import Button from '../../../components/AppButton/AppButton'
-import InputField from '../../../components/AppInput/AppInput'
+import { Button } from '../../../components/AppButton/AppButton'
+import { InputField } from '../../../components/AppInput/AppInput'
 import AddUser from '../../../pages/AddUser/AddUser'
 
-function AppMainMiddle({ list, handleUserData, setIsSearch, searchData }) {
+function AppFilters({ list, handleUserData, setIsSearch, searchData }) {
 
   const [isUser, setIsUser] = useState(false)
   const [input, setInput] = useState("")
@@ -32,6 +32,7 @@ function AppMainMiddle({ list, handleUserData, setIsSearch, searchData }) {
     setInput(value);
   }
 
+  
   const handleSort = (value) => {
 
     let sortedData = [...list]
@@ -67,4 +68,4 @@ function AppMainMiddle({ list, handleUserData, setIsSearch, searchData }) {
   )
 }
 
-export default AppMainMiddle
+export default AppFilters
