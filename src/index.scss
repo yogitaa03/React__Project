@@ -1,0 +1,14 @@
+@use './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    background-color: variables.$body-bg-color;
+    width: 100%;
+    height: 100%;
+  }
+  
