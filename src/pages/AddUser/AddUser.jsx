@@ -78,10 +78,10 @@ function AddUser({ isAddOpen, isUpdateOpen ,handleUserData, userToUpdate }) {
       <div className="formPopup" >
         <img src={AddNewImage} className="formPopupImage" />
         <img src={WrongImage} className="formPopupWrong" onClick={isAddOpen} />
-        <InputField text='text' holder="Enter Userimage path" name="formPopupEntries" inputValue={userImage} input={(e) => setUserImage(e.target.value)} />
-        <InputField text='text' holder="Enter Username" name="formPopupEntries" inputValue={userName} input={(e) => setUserName(e.target.value)} />
-        <InputField text='text' holder="Enter UserCountry" name="formPopupEntries" inputValue={userCountry} input={(e) => setUserCountry(e.target.value)} />
-        <InputField text='text' holder="Enter UserRatings" name="formPopupEntries" inputValue={userRatings} input={(e) => setUserRatings(e.target.value)} />
+        <InputField text='text' holder="Enter user image path" name="formPopupEntries" inputValue={userImage} input={(e) => setUserImage(e.target.value)} />
+        <InputField text='text' holder="Enter user name" name="formPopupEntries" inputValue={userName} input={(e) => setUserName(e.target.value)} />
+        <InputField text='text' holder="Enter user country" name="formPopupEntries" inputValue={userCountry} input={(e) => setUserCountry(e.target.value)} />
+        <InputField text='text' holder="Enter user ratings" name="formPopupEntries" inputValue={userRatings} input={(e) => setUserRatings(e.target.value)} />
         <Button name="formPopupButton" text="Submit" />
       </div>
     </form>

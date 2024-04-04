@@ -1,0 +1,81 @@
+@use '../../variables';
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: variables.$wid-per-100;
+    height: variables.$wid-per-100;
+    padding: 30px 200px 0 200px;
+    margin-top: 40px;
+}
+
+.element {
+    background-color: variables.$color-white;
+    padding: 10px;
+    grid-row: span 8;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ElementImg {
+    width: variables.$wid-px-160;
+    height: variables.$height-px-160;
+    border-radius: 50%;
+    margin-top: 12px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.ElementName {
+    font-weight: 600;
+    font-size: variables.$font-px-16;
+}
+
+.ElementCountry {
+    font-weight: 300;
+    color: rgb(124, 124, 124);
+    font-size: variables.$font-px-14;
+    margin-bottom: 10px;
+}
+
+.ElementName,
+.ElementCountry {
+    font-family: "Roboto", sans-serif;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.ElementRating {
+    text-align: center;
+    color: variables.$star-bg-color-orange;
+    font-size: variables.$font-px-17;
+    letter-spacing: 4px;
+}
+
+.ElementButton {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.btn {
+    width: variables.$wid-px-70;
+    height: variables.$height-px-30;
+    text-align: center;
+    background-color: variables.$navigation-color-5f6efa;
+    border-radius: 10px;
+    border: none;
+    color: variables.$color-white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 10px #6572e8;
+}
+
+.element:hover {
+    cursor: pointer;
+    border: 4px solid #727cd8;
+}

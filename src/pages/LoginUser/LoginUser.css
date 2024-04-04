@@ -1,0 +1,47 @@
+.login {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: relative;
+}
+
+.loginImage {
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+}
+
+.loginCross {
+  width: 20px;
+  height: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+.loginAuthentication {
+  margin: 10px 0 40px 100px;
+}
+
+.loginAuthenticationInput {
+  display: block;
+  width: 300px;
+  height: 30px;
+  box-shadow: 5px 5px 5px rgb(233, 230, 230);
+  outline: none;
+  border: none;
+}
+
+.loginAuthenticationInput:hover {
+  border-bottom: 2px solid black;
+}
+
+.loginBtn {
+  border-radius: 25px;
+  width: 200px;
+  padding: 8px;
+  border: none;
+  color: white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(71, 67, 139) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
+  cursor: pointer;
+}/*# sourceMappingURL=LoginUser.css.map */

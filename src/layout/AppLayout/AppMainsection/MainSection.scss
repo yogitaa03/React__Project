@@ -1,0 +1,49 @@
+@use '../../../variables';
+
+.maincontainer {
+    text-align: center;
+}
+
+.maincontainerHeaderTitle {
+    padding: 30px 200px 0 200px;
+    font-family: "Roboto", sans-serif;
+}
+
+.maincontainerMiddle {
+    padding: 30px 200px 0 200px;
+    margin-top: 30px;
+}
+
+.maincontainerMiddlePart {
+    display: flex;
+}
+
+.searchImg {
+    width: variables.$wid-px-40;
+    height: variables.$height-px-40;
+    box-shadow: 5px 5px 5px variables.$shadow-box-color;
+}
+
+.searchInput {
+    width: variables.$wid-px-820;
+    height: variables.$height-px-40;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 5px variables.$shadow-box-color;
+    font-size: variables.$font-px-15;
+}
+
+.formButton,
+.inputSort {
+    margin-left: 10px;
+    padding: 5px;
+    width: variables.$wid-px-115;
+    height: variables.$height-px-40;
+    background-color: variables.$color-white;
+    box-shadow: 5px 5px 5px variables.$shadow-box-color;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: grey;
+}

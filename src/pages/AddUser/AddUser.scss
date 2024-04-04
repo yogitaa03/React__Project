@@ -1,0 +1,49 @@
+@use '../../variables';
+
+.formPopup {
+    width: variables.$wid-px-600;
+    height: variables.$height-px-600;
+    background-color: variables.$color-white;
+    position: relative;
+}
+
+.formPopupImage {
+    width: variables.$wid-px-200;
+    height: variables.$height-px-200;
+}
+
+.formPopupEntries {
+    display: block;
+    margin: 10px 0 30px 80px;
+    width: variables.$wid-px-450;
+    height: variables.$height-px-40;
+    box-shadow: 0 5px 5px rgb(233, 230, 230);
+    outline: none;
+    border: none;
+    font-size: variables.$font-px-16;
+    padding-left: 10px;
+}
+
+.formPopupEntries:hover {
+    border-bottom: 1px solid black;
+}
+
+.formPopupButton {
+    border-radius: 25px;
+    width: variables.$wid-px-250;
+    height: variables.$height-px-40;
+    padding: 8px;
+    border: none;
+    color: variables.$color-white;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgb(71, 67, 139) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.formPopupWrong {
+    width: variables.$wid-px-20;
+    height: variables.$height-px-20;
+    float: right;
+    cursor: pointer;
+}

@@ -1,0 +1,49 @@
+@use '../../variables';
+
+.login {
+    width: variables.$wid-px-500;
+    height: variables.$height-px-500;
+    background-color: variables.$color-white;
+    position: relative;
+}
+
+.loginImage {
+    width: variables.$wid-px-200;
+    height: variables.$height-px-200;
+    margin-left: 20px
+}
+
+.loginCross {
+    width: variables.$wid-px-20;
+    height: variables.$height-px-20;
+    float: right;
+    cursor: pointer;
+}
+
+.loginAuthentication {
+    margin: 10px 0 40px 100px;
+}
+
+.loginAuthenticationInput {
+    display: block;
+    width: variables.$wid-px-300;
+    height: variables.$height-px-30;
+    box-shadow: 5px 5px 5px variables.$input-shadow-color;
+    outline: none;
+    border: none;
+}
+
+.loginAuthenticationInput:hover {
+    border-bottom: 2px solid black;
+}
+
+.loginBtn {
+    border-radius: 25px;
+    width: variables.$wid-px-200;
+    padding: 8px;
+    border: none;
+    color: variables.$color-white;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgb(71, 67, 139) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    cursor: pointer;
+}

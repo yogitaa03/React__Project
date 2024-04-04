@@ -31,10 +31,11 @@
   font-size: 15px;
 }
 
-.formButton , .inputSort {
+.formButton,
+.inputSort {
   margin-left: 10px;
-  padding: 8px;
-  width: 110px;
+  padding: 5px;
+  width: 115px;
   height: 40px;
   background-color: white;
   box-shadow: 5px 5px 5px rgb(201, 195, 195);
@@ -43,4 +44,4 @@
   outline: none;
   cursor: pointer;
   color: grey;
-}
+}/*# sourceMappingURL=MainSection.css.map */
