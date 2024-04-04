@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import Search from '../../../assets/images/search__image.png'
-import './MainSection.css'
-import { Button } from '../../../components/AppButton/AppButton'
-import { InputField } from '../../../components/AppInput/AppInput'
-import AddUser from '../../../pages/AddUser/AddUser'
+import React, { useState, useEffect } from "react"
+import Search from "../../../assets/images/search__image.png"
+import "./MainSection.css"
+import { Button } from "../../../components/AppButton/AppButton"
+import { InputField } from "../../../components/AppInput/AppInput"
+import AddUser from "../../../pages/AddUser/AddUser"
 
 function AppFilters({ list, handleUserData, setIsSearch, searchData }) {
 

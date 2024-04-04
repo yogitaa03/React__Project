@@ -1,7 +1,7 @@
-import React ,{useState} from 'react'
-import { Button } from '../AppButton/AppButton'
-import AddUser from '../../pages/AddUser/AddUser'
-import './ProfileCard.css'
+import React ,{useState} from "react"
+import { Button } from "../AppButton/AppButton"
+import AddUser from "../../pages/AddUser/AddUser"
+import "./ProfileCard.css"
 
 function ProfileCard(props) {
 

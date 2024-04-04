@@ -1,8 +1,8 @@
-import LoginImage from '../../assets/images/login__image.jpg'
-import WrongImage from '../../assets/images/wrong__image.png'
-import './LoginUser.css'
-import { Button } from '../../components/AppButton/AppButton'
-import { InputField } from '../../components/AppInput/AppInput'
+import LoginImage from "../../assets/images/login__image.jpg"
+import WrongImage from "../../assets/images/wrong__image.png"
+import "./LoginUser.css"
+import { Button } from "../../components/AppButton/AppButton"
+import { InputField } from "../../components/AppInput/AppInput"
 
 export const LoginForm=({closeLogin})=>
 {
@@ -14,10 +14,10 @@ export const LoginForm=({closeLogin})=>
                 <img src={LoginImage} className="loginImage"/>
                 <img src={WrongImage} className="loginCross" onClick={closeLogin}/>
                 <div className="loginAuthentication">
-                <InputField text='text' holder="Username" name="loginAuthenticationInput"/>
+                <InputField text="text" holder="Username" name="loginAuthenticationInput"/>
                 </div>
                 <div className="loginAuthentication">
-                <InputField text='text' holder="Password" name="loginAuthenticationInput"  />
+                <InputField text="text" holder="Password" name="loginAuthenticationInput"  />
                 </div>
                 <Button name="loginBtn" text="Login" action={closeLogin}/>
             </div>

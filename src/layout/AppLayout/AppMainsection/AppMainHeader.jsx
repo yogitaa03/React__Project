@@ -1,5 +1,5 @@
-import React from 'react'
-import './MainSection.css'
+import React from "react"
+import "./MainSection.css"
 
 function MainHeader() {
     return (

@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import Header from './layout/AppLayout/AppHeader/AppHeader'
-import MainHeader from './layout/AppLayout/AppMainsection/AppMainHeader';
-import AppFilters from './layout/AppLayout/AppMainsection/AppFilters';
-import ProfileCardGrid from './components/ProfileCard/ProfileCardGrid'
-import './App.css';
-import { data } from './layout/AppLayout/AppMainsection/UserData'
+import React, { useState } from "react"
+import Header from "./layout/AppLayout/AppHeader/AppHeader"
+import MainHeader from "./layout/AppLayout/AppMainsection/AppMainHeader";
+import AppFilters from "./layout/AppLayout/AppMainsection/AppFilters";
+import ProfileCardGrid from "./components/ProfileCard/ProfileCardGrid"
+import "./App.css";
+import { data } from "./layout/AppLayout/AppMainsection/UserData"
 function App() {
 
   const [list, setList] = useState(data);

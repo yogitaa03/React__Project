@@ -1,7 +1,7 @@
-import React from 'react'
-import Tick from '../../assets/images/tick__image.jpg'
-import Wrong__image from '../../assets/images/wrong__image.png'
-import './LoginForm.css'
+import React from "react"
+import Tick from "../../assets/images/tick__image.jpg"
+import Wrong__image from "../../assets/images/wrong__image.png"
+import "./LoginForm.css"
 
 function SuccessLogin() {
   return (

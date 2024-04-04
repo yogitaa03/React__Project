@@ -1,6 +1,6 @@
-import React from 'react'
-import ProfileCard from './ProfileCard'
-import './ProfileCard.css'
+import React from "react"
+import ProfileCard from "./ProfileCard"
+import "./ProfileCard.css"
 function ProfileCardGrid({ list, handleUserData }) {
 
 
@@ -10,7 +10,7 @@ function ProfileCardGrid({ list, handleUserData }) {
 
 
   return (
-    <div className='grid'>
+    <div className="grid">
 
       {list.map((user) => {
 
