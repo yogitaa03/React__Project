@@ -4,31 +4,30 @@ import Button from '../../components/AppButton/AppButton'
 import AddNewImage from '../../assets/images/addnew__image.png'
 import WrongImage from '../../assets/images/wrong__image.png'
 import './AddUser.css'
-// import { data } from '../../layout/AppLayout/AppMainSection/UserData'
 import { data } from '../../layout/AppLayout/AppMainsection/UserData'
 
 function AddUser({ isAddOpen, isUpdateOpen ,handleUserData, userToUpdate }) {
 
 
-  const [imageURL, setImageURL] = useState("")
-  const [imageName, setImageName] = useState("")
-  const [imageCountry, setImageCountry] = useState("")
-  const [imageRatings, setImageRatings] = useState("")
+  const [userImage, setUserImage] = useState("")
+  const [userName, setUserName] = useState("")
+  const [userCountry, setUserCountry] = useState("")
+  const [userRatings, setUserRatings] = useState("")
 
   useEffect(() => {
     if (userToUpdate) {
 
-      setImageURL(userToUpdate.Img_URL);
-      setImageName(userToUpdate.name);
-      setImageCountry(userToUpdate.country);
-      setImageRatings(userToUpdate.rating);
+      setUserImage(userToUpdate.Img_URL);
+      setUserName(userToUpdate.name);
+      setUserCountry(userToUpdate.country);
+      setUserRatings(userToUpdate.rating);
     } 
 
     else {
-      setImageURL('');
-      setImageName('');
-      setImageCountry('');
-      setImageRatings('');
+      setUserImage('');
+      setUserName('');
+      setUserCountry('');
+      setUserRatings('');
     }
   }, [userToUpdate]);
 
@@ -43,10 +42,10 @@ function AddUser({ isAddOpen, isUpdateOpen ,handleUserData, userToUpdate }) {
 
       let updatedUser = {
 
-        Img_URL: imageURL,
-        name: imageName,
-        country: imageCountry,
-        rating: imageRatings,
+        Img_URL: userImage,
+        name: userName,
+        country: userCountry,
+        rating: userRatings,
         id: userToUpdate.id
 
       }
@@ -60,10 +59,10 @@ function AddUser({ isAddOpen, isUpdateOpen ,handleUserData, userToUpdate }) {
 
       let newMember = {
 
-        Img_URL: imageURL,
-        name: imageName,
-        country: imageCountry,
-        rating: imageRatings,
+        Img_URL: userImage,
+        name: userName,
+        country: userCountry,
+        rating: userRatings,
         id: data.length 
       }
 
@@ -76,14 +75,14 @@ function AddUser({ isAddOpen, isUpdateOpen ,handleUserData, userToUpdate }) {
 
   return (
     <form className='form' onSubmit={handleSubmit}>
-      <div className="addNewForm__popup" >
-        <img src={AddNewImage} className="addNewForm__popup__image" />
-        <img src={WrongImage} className="addNewForm__popup__wrong" onClick={isAddOpen} />
-        <InputField text='text' holder="Image__URL.." name="addNewForm__popup__entries" inputValue={imageURL} input={(e) => setImageURL(e.target.value)} />
-        <InputField text='text' holder="Username" name="addNewForm__popup__entries" inputValue={imageName} input={(e) => setImageName(e.target.value)} />
-        <InputField text='text' holder="Country" name="addNewForm__popup__entries" inputValue={imageCountry} input={(e) => setImageCountry(e.target.value)} />
-        <InputField text='text' holder="Ratings" name="addNewForm__popup__entries" inputValue={imageRatings} input={(e) => setImageRatings(e.target.value)} />
-        <Button name="addNewForm__popup__button" text="Submit" />
+      <div className="formPopup" >
+        <img src={AddNewImage} className="formPopupImage" />
+        <img src={WrongImage} className="formPopupWrong" onClick={isAddOpen} />
+        <InputField text='text' holder="Enter Userimage path" name="formPopupEntries" inputValue={userImage} input={(e) => setUserImage(e.target.value)} />
+        <InputField text='text' holder="Enter Username" name="formPopupEntries" inputValue={userName} input={(e) => setUserName(e.target.value)} />
+        <InputField text='text' holder="Enter UserCountry" name="formPopupEntries" inputValue={userCountry} input={(e) => setUserCountry(e.target.value)} />
+        <InputField text='text' holder="Enter UserRatings" name="formPopupEntries" inputValue={userRatings} input={(e) => setUserRatings(e.target.value)} />
+        <Button name="formPopupButton" text="Submit" />
       </div>
     </form>
   )

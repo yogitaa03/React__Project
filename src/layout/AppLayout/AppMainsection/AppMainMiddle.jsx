@@ -9,9 +9,10 @@ function AppMainMiddle({ list, handleUserData, setIsSearch, searchData }) {
 
   const [isUser, setIsUser] = useState(false)
   const [input, setInput] = useState("")
+  // const [sortType, setSortType] = useState("")
+
 
   let filteredData = []
-
   useEffect(() => {
     if (input.length) {
       filteredData = list.filter((user) =>
@@ -33,18 +34,6 @@ function AppMainMiddle({ list, handleUserData, setIsSearch, searchData }) {
     setInput(value);
   }
 
-  const handleSort =(value) =>
-  {
-    if(value === "ascending")
-    {
-      console.log("ascending")
-    }
-
-    if(value === "descending")
-    {
-      console.log("descending")
-    }
-  }
 
 
   return (
@@ -55,11 +44,7 @@ function AppMainMiddle({ list, handleUserData, setIsSearch, searchData }) {
           <InputField text="text" holder="Search for profiles..." name="searchInput" inputValue={input} input={(e) => profileSearch(e.target.value)} />
           <Button name="formButton" text="+ Add New" action={() => setIsUser(true)} />
           {isUser && <AddUser handleUserData={handleUserData} isAddOpen={() => setIsUser(false)} />}
-          <select className="inputSort" onChange={(e)=> handleSort(e.target.value)}>
-            <option value="">&#xe17e; Sort By</option>
-            <option value="ascending">Ascending</option>
-            <option value="descending">Descending</option>
-          </select>
+         
         </div>
       </div>
     </>

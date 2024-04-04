@@ -1,16 +1,16 @@
-.addNewForm__popup {
+.formPopup {
   width: 600px;
   height: 600px;
   background-color: white;
   position: relative;
 }
 
-.addNewForm__popup__image {
+.formPopupImage {
   width: 200px;
   height: 200px;
 }
 
-.addNewForm__popup__entries {
+.formPopupEntries {
   display: block;
   margin: 10px 0 30px 80px;
   width: 450px;
@@ -22,11 +22,11 @@
   padding-left: 10px;
 }
 
-.addNewForm__popup__entries:hover {
+.formPopupEntries:hover {
   border-bottom: 1px solid black;
 }
 
-.addNewForm__popup__button {
+.formPopupButton {
   border-radius: 25px;
   width: 250px;
   height: 40px;
@@ -39,7 +39,7 @@
   margin-top: 30px;
 }
 
-.addNewForm__popup__wrong {
+.formPopupWrong {
   width: 20px;
   height: 20px;
   float: right;
