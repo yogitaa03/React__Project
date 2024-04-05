@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, FC } from "react"
 import Contender from "../../../assets/images/contentder__image.jpg"
 import "./AppHeader.css"
-import { LoginForm } from "../../../pages/LoginUser/LoginUser"
 import { Button } from "../../../components/AppButton/AppButton"
-function Header() {
-    const [isLogin, setIsLogin] = useState(false)
+import { LoginForm } from "../../../pages/LoginUser/LoginUser"
+
+export const Header: FC = () => {
+    const [isLogin, setIsLogin] = useState<boolean>(false)
 
     return (
         <>
@@ -16,8 +17,7 @@ function Header() {
                 <div className="headerRight">
                     <nav className="headerRightNavigation">
                         <div>Templates</div>
-                    </nav>
-                    <nav className="headerRightNavigation">
+                    </nav>                     <nav className="headerRightNavigation">
                         <div>Features</div>
                     </nav>
                     <nav className="headerRightNavigation">
@@ -32,6 +32,5 @@ function Header() {
             </header>
         </>
     )
-}
 
-export default Header
+}
