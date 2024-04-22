@@ -1,15 +1,9 @@
-@use './variables';
+@use "./variables";
 
-
-.form {
-    width: variables.$wid-per-100;
-    height: variables.$height-per-100;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
+.appFlex{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: variables.$wid-vw-100;
+    height: variables.$height-vh-100;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

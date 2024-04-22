@@ -1,24 +1,40 @@
 //UI - colors
 $body-bg-color: #e3e5fa;
 $color-white: white;
+$color-purple: purple;
+$color-black: black;
+$color-grey: grey;
+$color-lightblue: rgba(122, 222, 238, 1);
+$color-lightpurple:rgba(175, 120, 230, 1);
+$color-pink: rgb(221, 161, 212);
+$form-bg-color: radial-gradient(circle, rgba(175, 120, 230, 1) 0%, rgba(122, 222, 238, 1) 100%);
 $navigation-color-5f6efa: #5f6efa;
-$form-bg-color: rgba(0, 0, 0, 0.4);
 $star-bg-color-orange: rgb(238, 157, 6);
-$input-shadow-color:rgb(233, 230, 230);
-$shadow-box-color:rgb(201, 195, 195);
+$input-shadow-color: rgb(233, 230, 230);
+$shadow-box-color: rgb(201, 195, 195);
 
 //UI - width
-$wid-per-100: 100%; //percentage-width
+$wid-per-100: 100%;
+$wid-per-90: 90%;
+$wid-per-85: 85%;
+//percentage-width
+$wid-vw-100: 100vw;
 
 $wid-px-20: 20px;
 $wid-px-30: 30px;
+$wid-px-35: 35px;
 $wid-px-40: 40px;
+$wid-px-50: 50px;
 $wid-px-70: 70px;
+$wid-px-100: 100px;
 $wid-px-105: 105px;
 $wid-px-110: 110px;
 $wid-px-115: 115px;
+$wid-px-130: 130px;
 $wid-px-160: 160px;
+$wid-px-180: 180px;
 $wid-px-200: 200px;
+$wid-px-220: 220px;
 $wid-px-250: 250px;
 $wid-px-300: 300px;
 $wid-px-450: 450px;
@@ -28,18 +44,25 @@ $wid-px-820: 820px;
 $wid-px-940: 940px;
 
 //UI - heigth
-$height-per-100:100%; //percentage-heigth
+$height-per-100: 100%; //percentage-heigth
+$height-vh-100: 100vh;
 
-$height-px-20:20px;
-$height-px-30:30px;
-$height-px-40:40px;
-$height-px-45:45px;
-$height-px-100:100px;
-$height-px-200:200px;
-$height-px-160:160px;
-$height-px-180:180px;
-$height-px-500:500px;
-$height-px-600:600px;
+$height-px-20: 20px;
+$height-px-30: 30px;
+$height-px-35: 35px;
+$height-px-40: 40px;
+$height-px-45: 45px;
+$height-px-50: 50px;
+$height-px-100: 100px;
+$height-px-200: 200px;
+$height-px-160: 160px;
+$height-px-180: 180px;
+$height-px-330: 330px;
+$height-px-350: 350px;
+$height-px-400: 400px;
+$height-px-500: 500px;
+$height-px-600: 600px;
+$height-px-700: 700px;
 
 //UI - fontsize
 $font-px-10: 10px;
@@ -49,4 +72,8 @@ $font-px-16: 16px;
 $font-px-17: 17px;
 $font-px-18: 18px;
 $font-px-20: 20px;
+$font-px-22: 22px;
 $font-px-25: 25px;
+$font-px-90: 90px;
+$font-px-100: 100px;
+$font-px-130: 130px;

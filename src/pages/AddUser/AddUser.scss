@@ -1,49 +1,98 @@
 @use '../../variables';
 
+.form {
+    width: variables.$wid-per-100;
+    height: variables.$height-per-100;
+    margin: 120px 0 0 380px;
+}
+
 .formPopup {
-    width: variables.$wid-px-600;
-    height: variables.$height-px-600;
     background-color: variables.$color-white;
-    position: relative;
-}
+    width: variables.$wid-per-85;
+    height: variables.$height-px-500;
 
-.formPopupImage {
-    width: variables.$wid-px-200;
-    height: variables.$height-px-200;
-}
+    .formHeading {
+        display: flex;
+    
+        .arrow {
+            width: variables.$wid-px-30;
+            height: variables.$height-px-30;
+            background-color: variables.$color-purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: variables.$font-px-18;
+            color: variables.$color-white;
+            cursor: pointer;
+    
+        }
+    
+        .formName
+        {
+            margin: 50px 0 0 20px;
+            font-size: variables.$font-px-25;
+            color: variables.$color-purple;
+            font-weight: bolder;
+        }
+    }
+    
 
-.formPopupEntries {
-    display: block;
-    margin: 10px 0 30px 80px;
-    width: variables.$wid-px-450;
-    height: variables.$height-px-40;
-    box-shadow: 0 5px 5px rgb(233, 230, 230);
-    outline: none;
-    border: none;
-    font-size: variables.$font-px-16;
-    padding-left: 10px;
-}
+    .formArea
+    {
+        display: grid;
+        grid-template-columns: 500px 500px;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-.formPopupEntries:hover {
-    border-bottom: 1px solid black;
-}
+    .formInput {
+        width: variables.$wid-px-300;
+        height: variables.$height-px-100;
+        margin: 50px 0 0 100px;
+    }
 
-.formPopupButton {
-    border-radius: 25px;
-    width: variables.$wid-px-250;
-    height: variables.$height-px-40;
-    padding: 8px;
-    border: none;
-    color: variables.$color-white;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgb(71, 67, 139) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-    cursor: pointer;
-    margin-top: 30px;
-}
 
-.formPopupWrong {
-    width: variables.$wid-px-20;
-    height: variables.$height-px-20;
-    float: right;
-    cursor: pointer;
+    .formInputLabel {
+        font-size: variables.$font-px-18;
+        color: variables.$color-purple;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    .formInputEntries {
+        margin-top: 5px;
+        padding-left: 10px;
+        border-radius: 15px;
+        width: variables.$wid-px-300;
+        height: variables.$height-px-40;
+        box-shadow: 0 5px 5px rgb(221, 161, 212);
+        outline: none;
+        border: none;
+        font-size: variables.$font-px-14;
+        color: variables.$color-purple;
+    }
+
+    .formInputEntries:hover {
+        border: 3px dotted variables.$color-pink;
+    }
+
+    .formInputButton {
+        border-radius: 25px;
+        width: variables.$wid-px-160;
+        height: variables.$height-px-40;
+        padding: 8px;
+        font-weight: bold;
+        border: 2px solid variables.$color-purple;
+        color: variables.$color-white;
+        background-color: variables.$color-white;
+        color: variables.$color-purple;
+        cursor: pointer;
+        margin: 50px 0 0 400px;
+    }
+
+    .formInputButton:hover {
+        background-color: variables.$color-purple;
+        color: variables.$color-white;
+    }
+
 }

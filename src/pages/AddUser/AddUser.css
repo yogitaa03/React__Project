@@ -1,47 +1,80 @@
+.form {
+  width: 100%;
+  height: 100%;
+  margin: 120px 0 0 380px;
+}
+
 .formPopup {
-  width: 600px;
-  height: 600px;
   background-color: white;
-  position: relative;
+  width: 85%;
+  height: 500px;
 }
-
-.formPopupImage {
-  width: 200px;
-  height: 200px;
+.formPopup .formHeading {
+  display: flex;
 }
-
-.formPopupEntries {
-  display: block;
-  margin: 10px 0 30px 80px;
-  width: 450px;
+.formPopup .formHeading .arrow {
+  width: 30px;
+  height: 30px;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.formPopup .formHeading .formName {
+  margin: 50px 0 0 20px;
+  font-size: 25px;
+  color: purple;
+  font-weight: bolder;
+}
+.formPopup .formArea {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  justify-content: space-around;
+  align-items: center;
+}
+.formPopup .formInput {
+  width: 300px;
+  height: 100px;
+  margin: 50px 0 0 100px;
+}
+.formPopup .formInputLabel {
+  font-size: 18px;
+  color: purple;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.formPopup .formInputEntries {
+  margin-top: 5px;
+  padding-left: 10px;
+  border-radius: 15px;
+  width: 300px;
   height: 40px;
-  box-shadow: 0 5px 5px rgb(233, 230, 230);
+  box-shadow: 0 5px 5px rgb(221, 161, 212);
   outline: none;
   border: none;
-  font-size: 16px;
-  padding-left: 10px;
+  font-size: 14px;
+  color: purple;
 }
-
-.formPopupEntries:hover {
-  border-bottom: 1px solid black;
+.formPopup .formInputEntries:hover {
+  border: 3px dotted rgb(221, 161, 212);
 }
-
-.formPopupButton {
+.formPopup .formInputButton {
   border-radius: 25px;
-  width: 250px;
+  width: 160px;
   height: 40px;
   padding: 8px;
-  border: none;
+  font-weight: bold;
+  border: 2px solid purple;
   color: white;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgb(71, 67, 139) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
+  background-color: white;
+  color: purple;
   cursor: pointer;
-  margin-top: 30px;
+  margin: 50px 0 0 400px;
 }
-
-.formPopupWrong {
-  width: 20px;
-  height: 20px;
-  float: right;
-  cursor: pointer;
+.formPopup .formInputButton:hover {
+  background-color: purple;
+  color: white;
 }/*# sourceMappingURL=AddUser.css.map */

@@ -1,26 +1,27 @@
-import React, { FC, useState } from "react"
+import React, { FC } from "react"
 import { Button } from "../AppButton/AppButton"
 import "./ProfileCard.css"
-import AddUser from "../../pages/AddUser/AddUser"
-import { DefaultData } from "../../layout/AppLayout/AppMainsection/UserData"
+import { DefaultData } from "../../pages/UserPage/UserData"
+import { useNavigate } from "react-router-dom"
 
 interface ProfileCardProps {
 
     gridData: DefaultData
     handleUserData?: any
     handleRemove?: any
+    userToUpdate?: any
 
 }
 
 const ProfileCard: FC<ProfileCardProps> = (props) => {
 
-    const{handleRemove} = props
-    const{handleUserData} = props
-    const{gridData} = props
-    const [isUpdate, setIsUpdate] = useState(false)
+    const { handleRemove } = props
+    const { handleUserData } = props
+    const { gridData } = props
+    const { userToUpdate } = props
+    const navigate = useNavigate()
 
-
-    function generateStar(rate:number) {
+    function generateStar(rate: number) {
         let stars = []
         for (let i = 1; i <= 5; i++) {
             if (i <= rate) {
@@ -33,6 +34,13 @@ const ProfileCard: FC<ProfileCardProps> = (props) => {
         return stars
     }
 
+    const handleUpdate = () => {
+        userToUpdate(gridData)
+        handleUserData(handleUserData)
+        navigate(`/user/updateUser/${gridData.id}`)
+    }
+
+
     return (
         <>
             <div className="element" key={gridData.id}>
@@ -43,8 +51,9 @@ const ProfileCard: FC<ProfileCardProps> = (props) => {
                     {generateStar(gridData.rating)}
                 </div>
                 <div className="ElementButton">
-                    <Button name="btn" text="Update" action={() => setIsUpdate(true)} />
-                    {isUpdate && <AddUser handleUserData={handleUserData} isOpen={() => setIsUpdate(false)} />}
+                    <Button name="btn" text="Update" action={handleUpdate} />
+                    {/* <Button name="btn" text="Update" action={() => setIsUpdate(true)} /> */}
+                    {/* {isUpdate && <AddUser handleUserData={handleUserData} userToUpdate={gridData} isOpen={() => setIsUpdate(false)} />} */}
                     <Button name="btn" text="Remove" action={() => handleRemove(gridData.id)} />
                 </div>
             </div>

@@ -1,0 +1,110 @@
+@use '../../variables';
+
+.login {
+    background: variables.$form-bg-color;
+    height: variables.$height-vh-100;
+}
+
+
+.loginForm {
+    width: variables.$wid-px-500;
+    height: variables.$height-px-350;
+    margin-left: 500px;
+}
+
+.loginImage {
+    font-size: variables.$font-px-100;
+    width: variables.$wid-px-100;
+    color: variables.$color-white;
+    margin: 50px 0 50px 700px;
+
+}
+
+.userName,
+.password {
+    padding: 20px 0 0 100px;
+}
+
+.userNameLabel,
+.passwordLabel {
+    color: variables.$color-white;
+    font-size: variables.$font-px-18;
+    font-weight: bold;
+}
+
+.userNameInput,
+.passwordInput {
+    display: block;
+    margin-top: 5px;
+    background-color: variables.$color-white;
+    color: variables.$color-lightpurple;
+    font-size: variables.$font-px-17;
+    width: variables.$wid-px-300;
+    height: variables.$height-px-40;
+    outline: none;
+    border: 2px solid variables.$color-lightblue;
+}
+
+.userNameInput:hover,
+.passwordInput:hover {
+    border: 3px dotted variables.$color-lightblue;
+}
+
+.checkPassword {
+    display: flex;
+    margin-top: 15px;
+}
+
+.toShowPassword {
+    margin-right: 55px;
+    color: variables.$color-white;
+    font-size: variables.$font-px-17;
+    cursor: pointer;
+}
+
+.showPassword {
+    cursor: pointer;
+    // font-size: variables.$font-px-18;
+}
+
+.forgetPassword {
+    color: variables.$color-white;
+    font-size: variables.$font-px-17;
+    text-decoration: none;
+    
+}
+
+.forgetPassword:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.formBtn
+{
+    display: flex;
+}
+
+.loginBtn,
+.signinBtn {
+    margin: 40px 0 0 100px;
+    width: variables.$wid-px-100;
+    font-size: variables.$font-px-14;
+    padding: 8px;
+    font-weight: bold;
+    border: 2px solid variables.$color-white;
+    background-color: variables.$color-lightblue;
+    color: variables.$color-white;
+    cursor: pointer;
+}
+
+.loginBtn:hover,
+.signinBtn:hover {
+    background: variables.$color-white;
+    color: variables.$color-lightblue;
+}
+
+.errorMsg{
+    margin-top: 5px;
+    color: red;
+    font-weight: bold;
+}

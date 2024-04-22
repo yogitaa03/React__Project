@@ -1,0 +1,12 @@
+@use "../../variables";
+
+.notFound{
+    margin-top:150px;
+    color: variables.$navigation-color-5f6efa;
+}
+
+.notFoundError
+{
+    display: flex;
+    justify-content: center;
+}

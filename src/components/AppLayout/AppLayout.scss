@@ -1,0 +1,98 @@
+@use '../../variables';
+
+.header {
+    background-color: variables.$color-white;
+    width: variables.$wid-per-100;
+    height: variables.$height-px-45;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.headerLeft {
+    width: variables.$wid-px-600;
+    display: flex;
+    align-items: center;
+}
+
+.headerLeftImage {
+  margin-left: 30px;
+    width: variables.$wid-px-30;
+    height: variables.$wid-px-30;
+}
+
+.headerLeftText {
+    font-family: sans-serif;
+    font-size: variables.$font-px-25;
+}
+
+.headerRight {
+    width: variables.$wid-px-250;
+    display: flex;
+    align-items: center;
+}
+
+// .headerRightNavigation {
+//     width: variables.$wid-px-110;
+//     border: 3px solid variables.$color-white;
+//     height: variables.$height-per-100;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+.headerRightNavigation:hover {
+    border-bottom-color: variables.$navigation-color-5f6efa;
+}
+
+.headerRightButton {
+    border-radius: 15px;
+    background-color: variables.$navigation-color-5f6efa;
+    margin-left: 120px;
+    width: variables.$wid-px-100;
+    height: variables.$height-px-35;
+    font-size: variables.$font-px-14;
+    font-weight: bold;
+    color: variables.$color-white;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar{
+    width: 15%;
+    height: variables.$height-px-700;
+    background-color: variables.$color-white;
+    position: fixed;
+    top: 45px;
+  
+  }
+
+  .sidebarOptionDefault, .sidebarOption, .sidebarOptionUser
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: variables.$height-px-45;
+    font-size: variables.$font-px-18;
+    letter-spacing: 1px;
+  }
+
+  .sidebarOptionDefault{
+    background-color: rgb(0,0,0,0.2);
+
+  }
+
+  .sidebarOptionUser{
+    text-decoration: none;
+    background-color: variables.$navigation-color-5f6efa;
+    color: variables.$color-white;
+  }
+  .sidebarOption{
+    text-decoration: none;
+    color: variables.$color-black;
+  }
+
+  .sidebarOption:hover{
+    background-color: variables.$navigation-color-5f6efa;
+    color: variables.$color-white;
+  }

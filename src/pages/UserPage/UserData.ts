@@ -1,7 +1,7 @@
-import grid__img1 from "../../../assets/images/grid__img1.png"
-import grid__img2 from "../../../assets/images/grid__img2.png"
-import grid__img3 from "../../../assets/images/grid__img3.png"
-import grid__img4 from "../../../assets/images/grid__img4.png"
+import grid__img1 from "../../assets/images/grid__img1.png"
+import grid__img2 from "../../assets/images/grid__img2.png"
+import grid__img3 from "../../assets/images/grid__img3.png"
+import grid__img4 from "../../assets/images/grid__img4.png"
 
 
 export interface DefaultData {
