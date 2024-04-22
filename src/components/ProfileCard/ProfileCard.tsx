@@ -52,8 +52,6 @@ const ProfileCard: FC<ProfileCardProps> = (props) => {
                 </div>
                 <div className="ElementButton">
                     <Button name="btn" text="Update" action={handleUpdate} />
-                    {/* <Button name="btn" text="Update" action={() => setIsUpdate(true)} /> */}
-                    {/* {isUpdate && <AddUser handleUserData={handleUserData} userToUpdate={gridData} isOpen={() => setIsUpdate(false)} />} */}
                     <Button name="btn" text="Remove" action={() => handleRemove(gridData.id)} />
                 </div>
             </div>

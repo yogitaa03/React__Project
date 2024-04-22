@@ -63,8 +63,6 @@ const AppFilters: FC<FilterProps> = ({ list, searchData, setIsSearch, handleUser
           <img src={Search} className="searchImg" />
           <InputField text="text" holder="Search for profiles..." name="searchInput" inputValue={input} input={(e) => profileSearch(e.target.value)} />
           <Button name="formButton" text="+Add New" action={() => navigate("/user/addUser")}/>
-          {/* <Button name="formButton" text="+ Add New" action={() => setIsUser(true)} /> */}
-          {/* {isUser && <AddUser handleUserData={handleUserData} isOpen={() => setIsUser(false)} />} */}
           <select className="inputSort" onChange={(e) => handleSort(e.target.value)}>
             <option value="" >↑↓ Sort By</option>
             <option value="ascending">↑ Ascending</option>

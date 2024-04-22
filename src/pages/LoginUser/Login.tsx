@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom"
 
 interface LoginFormProp {
 
-    // closeLogin: () => void
 }
 
 const LoginForm: FC<LoginFormProp> = ({ }) => {
