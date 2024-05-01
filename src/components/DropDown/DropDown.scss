@@ -1,0 +1,40 @@
+@use "../../variables";
+
+.dropDown {
+    width: variables.$wid-px-115;
+    height: variables.$height-px-90;
+    background-color: variables.$color-white;
+    position: absolute;
+    top: 45px;
+    right: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.dropDownListProfile,
+.dropDownListLogout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: variables.$color-black;
+    font-size: variables.$font-px-17;
+    height: variables.$height-px-45;
+    cursor: pointer;
+    transition: all linear 0.3s;
+    text-decoration: none;
+}
+
+.dropDownListProfile:hover {
+    background-color: variables.$navigation-color-5f6efa;
+    color: variables.$color-white;
+    border-top: 1px solid white;
+}
+
+.dropDownListLogout:hover {
+    background-color: variables.$color-red;
+    color: variables.$color-white;
+    border-top: 1px solid white;
+
+}

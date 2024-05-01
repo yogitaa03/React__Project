@@ -1,5 +1,5 @@
 import React ,{FC} from "react" 
-import "./MainSection.css"
+import "./MainSection.scss"
 
 const MainHeader: FC = () =>
     {

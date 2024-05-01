@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { Button } from "../AppButton/AppButton"
-import "./ProfileCard.css"
+import "./ProfileCard.scss"
 import { DefaultData } from "../../pages/UserPage/UserData"
 import { useNavigate } from "react-router-dom"
 
@@ -45,7 +45,7 @@ const ProfileCard: FC<ProfileCardProps> = (props) => {
         <>
             <div className="element" key={gridData.id}>
                 <img src={gridData.Img_URL} className="ElementImg" />
-                <p className="ElementName" >{gridData.name}</p>
+                <p className="ElementName" >{gridData.name.toLowerCase()}</p>
                 <p className="ElementCountry">{gridData.country}</p>
                 <div className="ElementRating" >
                     {generateStar(gridData.rating)}

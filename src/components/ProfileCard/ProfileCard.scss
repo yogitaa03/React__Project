@@ -27,12 +27,11 @@
 }
 
 .ElementName {
-    font-weight: 600;
     font-size: variables.$font-px-16;
+    text-transform: capitalize;
 }
 
 .ElementCountry {
-    font-weight: 300;
     color: rgb(124, 124, 124);
     font-size: variables.$font-px-14;
     margin-bottom: 10px;
@@ -42,7 +41,9 @@
 .ElementCountry {
     font-family: "Roboto", sans-serif;
     margin-top: 10px;
-    letter-spacing: 1px;
+    letter-spacing: .5px;
+    font-weight: bold;
+
 }
 
 .ElementRating {

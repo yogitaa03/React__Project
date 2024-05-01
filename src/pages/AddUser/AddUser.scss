@@ -2,14 +2,13 @@
 
 .form {
     width: variables.$wid-per-100;
-    height: variables.$height-per-100;
-    margin: 120px 0 0 380px;
+    margin: 75px 0 0 380px;
 }
 
 .formPopup {
     background-color: variables.$color-white;
     width: variables.$wid-per-85;
-    height: variables.$height-px-500;
+    height: variables.$height-px-600;
 
     .formHeading {
         display: flex;
@@ -17,7 +16,7 @@
         .arrow {
             width: variables.$wid-px-30;
             height: variables.$height-px-30;
-            background-color: variables.$color-purple;
+            background-color: variables.$color-121c8d;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -31,8 +30,10 @@
         {
             margin: 50px 0 0 20px;
             font-size: variables.$font-px-25;
-            color: variables.$color-purple;
+            color: variables.$color-121c8d;
             font-weight: bolder;
+            font-family: sans-serif;
+
         }
     }
     
@@ -48,13 +49,14 @@
     .formInput {
         width: variables.$wid-px-300;
         height: variables.$height-px-100;
-        margin: 50px 0 0 100px;
+        margin: 75px 0 0 100px;
     }
 
 
     .formInputLabel {
         font-size: variables.$font-px-18;
-        color: variables.$color-purple;
+        color: variables.$color-121c8d;
+        font-family: sans-serif;
         font-weight: bold;
         margin-left: 5px;
     }
@@ -65,15 +67,15 @@
         border-radius: 15px;
         width: variables.$wid-px-300;
         height: variables.$height-px-40;
-        box-shadow: 0 5px 5px rgb(221, 161, 212);
+        box-shadow: 0 5px 5px variables.$color-b2b8fa;
         outline: none;
         border: none;
         font-size: variables.$font-px-14;
-        color: variables.$color-purple;
+        color: variables.$color-454da8;
     }
 
     .formInputEntries:hover {
-        border: 3px dotted variables.$color-pink;
+        border: 3px dotted variables.$color-454da8;
     }
 
     .formInputButton {
@@ -82,17 +84,17 @@
         height: variables.$height-px-40;
         padding: 8px;
         font-weight: bold;
-        border: 2px solid variables.$color-purple;
-        color: variables.$color-white;
-        background-color: variables.$color-white;
-        color: variables.$color-purple;
+        font-family: sans-serif;
+        border: 2px solid variables.$color-121c8d;
+        background-color: variables.$color-b2b8fa;
+        color: variables.$color-121c8d;
         cursor: pointer;
         margin: 50px 0 0 400px;
     }
 
     .formInputButton:hover {
-        background-color: variables.$color-purple;
-        color: variables.$color-white;
+        background-color: variables.$color-121c8d;
+        color: variables.$color-b2b8fa;
     }
 
 }

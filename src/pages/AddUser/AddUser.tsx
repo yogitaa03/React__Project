@@ -3,7 +3,7 @@ import { Button } from "../../components/AppButton/AppButton";
 import { InputField } from "../../components/AppInput/AppInput";
 import { useNavigate } from "react-router-dom";
 import { DefaultData } from "../UserPage/UserData";
-import "./AddUser.css"
+import "./AddUser.scss"
 import data from "../UserPage/UserData";
 interface AddUserProp {
 
@@ -71,13 +71,14 @@ const AddUser: FC<AddUserProp> = ({ userToUpdate, handleUserData, setIsUpdate })
         name: name,
         country: country,
         rating: ratings,
-        id: data.length
+        id: data.length,
+        password:"Password"
       }
-
       handleUserData((prevArr: any) => [...prevArr, newMember])
+      data.push(newMember)
 
     }
-
+    
     navigate(-1)
 
   }

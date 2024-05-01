@@ -1,23 +1,25 @@
-import React, { FC, useState } from "react"
-import "./Login.css"
+import React, { FC, useContext, useState } from "react"
+import "./Login.scss"
 import { Button } from "../../components/AppButton/AppButton"
 import { InputField } from "../../components/AppInput/AppInput"
 import { useNavigate } from "react-router-dom"
+import { AuthContext } from "../../routes/Auth"
+import data from "../UserPage/UserData"
 
 
-interface LoginFormProp {
-
-}
-
-const LoginForm: FC<LoginFormProp> = ({ }) => {
+const LoginForm: FC= () => {
     const navigate = useNavigate()
     const [name, setName] = useState("")
     const [nameError, setNameError] = useState("")
     const [password, setPassword] = useState("")
     const [passwordError, setPasswordError] = useState("")
     const [isShowPassword, setIsShowPassword] = useState<boolean>(false)
-
+    const { loginSuccess, handleLoginUser } = useContext(AuthContext)
+    let loginFilter
     const handleLogin = () => {
+
+        loginFilter = data.find((value) => value.name === name && value.password === password)
+
         if (name === "" && password === "") {
             setNameError("Username is required*")
             setPasswordError("Password is required*")
@@ -38,17 +40,24 @@ const LoginForm: FC<LoginFormProp> = ({ }) => {
             setPasswordError("Password must be 6 to 8 characters*")
             setNameError("")
         }
+        else if (!loginFilter) {
+            setPasswordError("Username or Password is incorrect")
+            setNameError("")
+        }
         else {
-            navigate("/user")
             setNameError("")
             setPasswordError("")
+            loginSuccess()
+            handleLoginUser(loginFilter)
+            navigate("/user", { replace: true })
         }
-    }
 
+    }
+    
     return (
         <div className="login">
             <i className="fa fa-user-circle loginImage"></i>
-            <div className="loginForm" >
+            <form className="loginForm" >
                 <div className="userName">
                     <label htmlFor="name" className="userNameLabel">User Name</label>
                     <InputField text="text" name="userNameInput" input={(e) => setName(e.target.value)} />
@@ -68,9 +77,8 @@ const LoginForm: FC<LoginFormProp> = ({ }) => {
                 <div className="formBtn">
                     <Button name="loginBtn" text="Login" action={handleLogin} />
                     <Button name="signinBtn" text="Sign In?" />
-
                 </div>
-            </div>
+            </form >
         </div>
 
     )

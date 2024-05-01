@@ -1,0 +1,128 @@
+@use "../../variables";
+
+.profilePage {
+    width: variables.$wid-per-100;
+    margin: 75px 0 0 380px;
+
+    .profilePagePopup {
+        background-color: variables.$color-white;
+        width: variables.$wid-per-85;
+        height: variables.$height-px-600;
+    }
+
+    .popupHeader {
+        background-color: variables.$color-b2b8fa;
+        height: variables.$height-px-180;
+    }
+
+    .heading {
+        font-size: variables.$font-px-30;
+        color: variables.$color-121c8d;
+        text-shadow: 1px 1px 2px variables.$color-121c8d;
+        letter-spacing: 1px;
+        font-weight: bolder;
+        padding: 25px 0 0 40px;
+    }
+
+    .img {
+        margin: 20px 0 0 50px;
+        display: flex;
+
+        .userImg {
+            width: variables.$wid-px-170;
+            height: variables.$height-px-170;
+            border-radius: 100%;
+            border: 10px solid variables.$color-white;
+            -o-object-fit: cover;
+            object-fit: cover;
+            overflow: hidden;
+            background-color: variables.$color-white;
+        }
+
+        .name {
+            margin: 42px 0 0 40px;
+            font-size: variables.$font-px-50;
+            color: variables.$color-121c8d;
+            text-shadow: 2px 1px variables.$color-lightblue;
+            letter-spacing: 1px;
+            font-weight: bolder;
+
+        }
+    }
+
+    .profilePageDetails {
+        height: variables.$height-px-35;
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 500px 500px;
+    }
+
+    .details {
+        margin: 40px 0 0 100px;
+
+        .detailsLabel {
+            color: variables.$color-121c8d;
+            display: block;
+            font-size: variables.$font-px-18;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin: 10px 0 3px 10px;
+        }
+
+        .detailsInput,
+        .detailsInputName {
+            height: variables.$height-px-40;
+            width: variables.$wid-px-250;
+            border: 2px solid variables.$color-121c8d ;
+            color: variables.$color-454da8;
+            font-weight: bold;
+            border-radius: 15px;
+            text-align: center;
+            font-size: variables.$font-px-16;
+            outline: none;
+        }
+
+        .detailsInputName {
+            text-transform: capitalize;
+
+        }
+
+        .detailsInput:hover {
+            border: 3px dotted variables.$color-121c8d;
+        }
+    }
+
+    .profilePageEdit {
+        border-radius: 25px;
+        width: variables.$wid-px-160;
+        height: variables.$height-px-40;
+        padding: 8px;
+        font-weight: bold;
+        font-family: sans-serif;
+        border: 2px solid variables.$color-121c8d;
+        background-color: variables.$color-b2b8fa;
+        color: variables.$color-121c8d;
+        cursor: pointer;
+        margin: 50px 0 0 0px;
+    }
+
+    .profilePageBack{
+        border-radius: 25px;
+        width: variables.$wid-px-160;
+        height: variables.$height-px-40;
+        padding: 8px;
+        font-weight: bold;
+        font-family: sans-serif;
+        margin: 50px 0 0 300px;
+        cursor: pointer;
+    }
+    .profilePageBack:hover{
+        background-color: variables.$color-black;
+        color: rgb(222, 212, 212) ;
+    }
+    .profilePageEdit:hover {
+        background-color: variables.$color-121c8d;
+        color: variables.$color-b2b8fa;
+    }
+
+}

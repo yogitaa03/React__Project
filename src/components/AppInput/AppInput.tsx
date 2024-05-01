@@ -4,8 +4,8 @@ interface InputProps{
     text: string
     holder?: string
     name: string
-    inputValue?: string
-    input?: (any) => void
+    inputValue?: string | number 
+    input?: (e:any) => void
 }
 
 export const InputField: FC<InputProps> = (props) =>{

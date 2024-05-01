@@ -1,6 +1,6 @@
 import React, { useState, useEffect, FC } from "react"
 import Search from "../../assets/images/search__image.png"
-import "./MainSection.css"
+import "./MainSection.scss"
 import { Button } from "../../components/AppButton/AppButton"
 import { InputField } from "../../components/AppInput/AppInput"
 import { DefaultData } from "./UserData"

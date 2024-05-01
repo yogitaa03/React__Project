@@ -1,12 +1,18 @@
-import React, { FC } from "react"
+import React, { FC, useContext, useState } from "react"
 import Contender from "../../assets/images/contentder__image.jpg"
-import "./AppLayout.css"
-import { Button } from "../AppButton/AppButton"
-import { useNavigate } from "react-router-dom"
+import "./AppLayout.scss"
+import { AuthContext } from "../../routes/Auth"
+import DropDown from "../DropDown/DropDown"
 
 export const Header: FC = () => {
-    const navigate = useNavigate()
-
+    const { loginUserData } = useContext(AuthContext)
+    const [isDropDown, setIsDropDown] = useState<boolean>(false)
+    const handleMouseEnter = () => {
+        setIsDropDown(true)
+    }
+    const handleMouseLeave = () => {
+        setIsDropDown(false)
+    }
     return (
         <>
             <header className="header">
@@ -15,7 +21,13 @@ export const Header: FC = () => {
                     <p className="headerLeftText"><b>contentder</b></p>
                 </div>
                 <div className="headerRight">
-                    <Button name="headerRightButton" text="LOGOUT" action={() => navigate("/userlogin")} />
+                    <div className="headerRightUsername">
+                        <div className="loginUserName">{loginUserData.name.toUpperCase()}</div>
+                        <div className="headerRightImg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                            <img src={loginUserData.Img_URL} alt="" className="loginUserImage" />
+                            {isDropDown && <DropDown/>}
+                        </div>
+                    </div>
                 </div>
             </header>
         </>
