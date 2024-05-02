@@ -46,7 +46,7 @@ const AppRoutes: FC = () => {
                         <Route path="/user" element={<UserPage list={list} searchData={searchData} setIsSearch={setIsSearch} handleUserData={userData} userToUpdate={userToUpdate} isSearch={isSearch} search={search} />} />
                         <Route path="/user/addUser" element={<AddUser handleUserData={userData} />} />
                         <Route path="/user/updateUser/:type" element={<AddUser handleUserData={userData} userToUpdate={isUpdate && update} setIsUpdate={setIsUpdate} />} />
-                        <Route path="/userprofile" element={<ProfilePage handleUserData={userData}  />} />
+                        <Route path="/userprofile" element={<ProfilePage />} />
                     </Route>
                 </Route>
                 <Route path="/*" element={<NotFound />} />
